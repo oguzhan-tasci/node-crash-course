@@ -1,3 +1,9 @@
-const name = 'yoshi';
+const helloWorld = "Hello World!";
 
-console.log(name);
+const helloWorld2 = (name) => {
+    console.log(`Welcome ${name}`);
+}
+
+
+console.log(helloWorld);
+helloWorld2("Oguzhan");
