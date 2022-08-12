@@ -1,18 +1,20 @@
-// const people = require('./people');
+const people = require('./people');
 
-// console.log(people);
+console.log(people); // returned empty array because 'people.js' doesn't export
 
 // const data = require('./people');
 
+// We can use it like that :
 // console.log(data.people, data.ages);
 
-const { people, ages } = require('./people');
+// Or we can 'destruct' them :
+// const { people, ages } = require('./people');
 
-console.log(people, ages);
+// console.log(people, ages);
 
-const os = require('os');
+// const os = require('os');
 
-console.log(os.platform(), os.homedir());
+// console.log(os.platform(), os.homedir());
 
 
 
