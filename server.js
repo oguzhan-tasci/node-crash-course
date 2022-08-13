@@ -5,10 +5,10 @@ const _ = require('lodash');
 const server = http.createServer((req, res) => {
 
   // lodash
-  const num = _.random(0, 20);
+  const num = _.random(0, 20); // He create random number between 0 and 20
   console.log(num);
 
-  const greet = _.once(() => {
+  const greet = _.once(() => {  // 'once' just works 1 time
     console.log('hello');
   });
   greet();
