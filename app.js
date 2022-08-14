@@ -1,6 +1,15 @@
 const express = require('express');
 const morgan = require('morgan');
 
+// Middleware : Code which runs (on the server) between getting a request and sending a respond   
+// Middleware examples
+// Logger middleware to log details of every request
+// Authentication check middleware for protected routes
+// Middleware to parse JSON data from requests
+// Return 404 pages
+
+
+
 // express app
 const app = express();
 
