@@ -32,7 +32,7 @@ app.get('/about-us', (req, res) => {
 
 // 404 page 
 // 'use' function is going to fire for every single request coming in but only if the request reaches this point in the code
-app.use((req, res) => {
+app.use((req, res) => { // this is a catch-all , As a result if we write this code in the top , it's works
   res.status(404).sendFile('./views/404.html', {
     root: __dirname
   });
