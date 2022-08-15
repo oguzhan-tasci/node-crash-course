@@ -8,8 +8,6 @@ const morgan = require('morgan');
 // Middleware to parse JSON data from requests
 // Return 404 pages
 
-
-
 // express app
 const app = express();
 
@@ -20,6 +18,9 @@ app.listen(3000);
 app.set('view engine', 'ejs');
 
 // middleware & static files
+// If we added some kind of static files to our project for example images or CSS file,
+//  can we wouldn't be able to automatically access that file from the browser.
+// That's why I couldn't  access my images in my previous lesson :)
 app.use(express.static('public'));
 
 app.use((req, res, next) => {
@@ -34,6 +35,8 @@ app.use((req, res, next) => {
   console.log('in the next middleware');
   next();
 });
+
+// 3rd-party Middleware
 
 app.use(morgan('dev'));
 
