@@ -14,7 +14,11 @@ const blogSchema = new Schema({
     type: String,
     required: true
   },
-}, { timestamps: true });
+}, {
+  timestamps: true
+});
+// timestamps : This automatically generates time stamp properties for us on our blog documents as well
 
+// First argument the name of this model ; second argument is gonna be schema name.
 const Blog = mongoose.model('Blog', blogSchema);
 module.exports = Blog;
