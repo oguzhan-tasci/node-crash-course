@@ -3,6 +3,12 @@ const morgan = require('morgan');
 const mongoose = require('mongoose');
 const blogRoutes = require('./routes/blogRoutes');
 
+// MVC Basics
+// -> Stands for Model,View,Controller
+// -> MVC is a way of structuring our code & files
+// -> Keeps code more modular , reusable & easier to read
+
+
 // express app
 const app = express();
 

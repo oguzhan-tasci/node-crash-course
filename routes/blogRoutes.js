@@ -3,6 +3,8 @@ const blogController = require('../controllers/blogController');
 
 const router = express.Router();
 
+// Note : Alt + click : it can select all what you click
+
 router.get('/create', blogController.blog_create_get);
 router.get('/', blogController.blog_index);
 router.post('/', blogController.blog_create_post);
