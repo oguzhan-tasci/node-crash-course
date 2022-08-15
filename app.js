@@ -7,7 +7,7 @@ const Blog = require('./models/blog');
 const app = express();
 
 // connect to mongodb & listen for requests
-const dbURI = "mongodb+srv://netninja:test1234@net-ninja-tuts-del96.mongodb.net/node-tuts";
+const dbURI = 'mongodb+srv://oguzhan1:oguzhan1@cluster0.0e4wyas.mongodb.net/note-tuts?retryWrites=true&w=majority';
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(result => app.listen(3000))
@@ -18,6 +18,7 @@ app.set('view engine', 'ejs');
 
 // middleware & static files
 app.use(express.static('public'));
+// This basically takes all the URL encoded data that comes along for the ride and it passes that into an object that we can use on the request object.
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 app.use((req, res, next) => {
@@ -50,7 +51,7 @@ app.get('/blogs', (req, res) => {
 });
 
 app.post('/blogs', (req, res) => {
-  // console.log(req.body);
+  console.log(req.body); //  -> req.body : That contains all the information we need from the webform
   const blog = new Blog(req.body);
 
   blog.save()
